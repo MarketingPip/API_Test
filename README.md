@@ -1,5 +1,6 @@
 # API_Test
 
 
-<!---Hide--
+<!---START OF CONTENT ---
 <script>alert("hello") </script>
+---Hide-->
