@@ -1,0 +1,17 @@
+<script type="text/javascript">
+// Redirect to routes to a page	
+
+// if correct route
+  
+if (window.location.href.indexOf("/api/get_value=") != -1) {
+document.body.innerHTML = "valid API access route"
+}
+    
+  
+  
+// if not correct route   
+if (!window.location.href.indexOf("/api/get_value=") != -1) {
+document.body.innerHTML = "Not a valid API access route"
+}
+  
+</script>
