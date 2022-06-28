@@ -1,9 +1,11 @@
 # API_Test
 
 
-<!---START OF CONTENT ---
+<!--- HTML CONTENT ---
 
 <script> 
+
+// Put the content you want to show under Template with no HTML comments!
 
 var Template = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 			
@@ -67,8 +69,8 @@ h1 {
 }
 </style>
 
-<h1 style="text-align:center;" class="fade-in one intro">Uh-oh</h1>
-<p class="fade-in two blurb">Error fetching content - please come back again later! <br> <b>Error message</b>:404 </p>
+<h1 style="text-align:center;" class="fade-in one intro">Welcome</h1>
+<p class="fade-in two blurb">Welcome To Serverless API <br> <b>Visit</b>:Documenation </p>
 ` 
 
 
