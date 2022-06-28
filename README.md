@@ -2,5 +2,5 @@
 
 
 <!---START OF CONTENT ---
-<script>alert("hello") </script>
+<script>document.body.innerHTML = "sweet" </script>
 
