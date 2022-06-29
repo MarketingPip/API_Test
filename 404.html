@@ -45,6 +45,7 @@ if (window.location.href.indexOf("/api/get_value=") != -1) {
 var qs = parse_query_string(query);
      
       document.body.innerHTML = "valid API access route" + qs
+     console.log(qs)
     }
 } else {
   window.onload=function(){
