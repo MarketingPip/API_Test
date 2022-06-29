@@ -19,7 +19,7 @@
 if (window.location.href.indexOf("/api/get_value=") != -1) {
 
    window.onload=function(){
-      var url = new URL(window.location.href);
+      var url = window.location.href;
       var query = url.searchParams.get("=");
      
       document.body.innerHTML = "valid API access route" + query
