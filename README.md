@@ -73,6 +73,7 @@ h1 {
 <p class="fade-in two blurb">Welcome To Serverless API <br> <b>Visit</b>:Documenation </p>
 ` 
 
+document.head.innerHTML = "" 
 
 document.body.innerHTML = Template </script>
 
