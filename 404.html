@@ -19,7 +19,10 @@
 if (window.location.href.indexOf("/api/get_value=") != -1) {
 
    window.onload=function(){
-      document.body.innerHTML = "valid API access route"
+      var url = new URL(window.location.href);
+      var query = url.searchParams.get("=");
+     
+      document.body.innerHTML = "valid API access route" + query
     }
 } else {
   window.onload=function(){
