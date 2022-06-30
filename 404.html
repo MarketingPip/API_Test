@@ -17,40 +17,38 @@
 
 
 
-if (window.location.href.indexOf("/api/get_value?") != -1) {
+if (window.location.href.indexOf("/api/get_value?")) {
 
    window.onload=function(){
      var url_string = window.location.href
       var url = new URL(url_string);
-var c = url.searchParams.get("a");
+var c = url.searchParams.get("route");
 console.log(c);
      
 	   
-	   var drive = {
-        "CPU": "Intel",
-        "Cores": 8,
-        "Drives": [
-            "DVD read/writer",
-            "1TB Sata 7200",
-            "250GB SSD",
-            32
-        ],
-        "Manufacturer": {
-            "Name": "Bob's Drives",
-            "Street": "331 Jefferson",
-            "City": "Gas City",
-            "State": "IN",
-            "ZipCode": 78216
-        }
+	   var colors = {
+        "color": "red",
+        "color_2": "black",
+        "color_3": "green"
+    };
+	   
+	   var Numbers = {
+        "Number_1": "1",
+        "Number_2": "2",
+        "Number_3": "3"
     };
 
-      document.body.innerHTML = "valid API access route, you searched for " + c
+	   
+	var Color_Json_To_String = JSON.stringify(colors);
+	   
       if (c == "colors") {
-	  document.body.innerHTML = "valid API access route, you searched for " + c + "<br>"+  "{color:red}"
+	  document.body.innerHTML = "valid API access route, you searched for " + c + "<br>"+ Color_Json_To_String 
 	  }
-	   var jsonStr = JSON.stringify(drive);
-	if (c == "drive") {
-	  document.body.innerHTML = "valid API access route, you searched for " + c + "<br>"+  jsonStr
+	   
+	   
+	   var Number_Json_To_String = JSON.stringify(Numbers);
+	if (c == "numbers") {
+	  document.body.innerHTML = "valid API access route, you searched for " + c + "<br>"+  Number_Json_To_String 
 	  }
 	   
     }
