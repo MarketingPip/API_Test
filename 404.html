@@ -54,14 +54,14 @@ if (window.location.href.indexOf("/api/get_value?") != -1) {
 var c = url.searchParams.get("a");
 console.log(c);
      
-      document.body.innerHTML = "valid API access route, you searched for " + c
+      document.body.innerHTML = "valid API access route, you searched for " + c +"<br>" + Colors
       
-     if (c == "colors"){
-       document.body.innerHTML = "valid API access route, you searched for " + c + "<br> " + Colors     
+     //if (c == "colors"){
+     //  document.body.innerHTML = "valid API access route, you searched for " + c + "<br> " + Colors     
      
-    } else {
+    //} else {
 	    
-    }
+   // }
 	   
 	   
 } else {
