@@ -22,10 +22,7 @@ if (window.location.href.indexOf("/api/get_value?") != -1) {
    window.onload=function(){
     
 	   
-     // if API route is not called properly / does not exist - display message	   
-    document.body.innerHTML = "Not a Valid API route, read documenation for proper usage."	   
-	   
-	   
+     
 	// else    
 	   
 	// Get the query from "/api/get_value?route=EXAMPLE"
@@ -47,14 +44,8 @@ var query = url.searchParams.get("route");
         "color_3": "green"
     };
 	   
-	   var Numbers = {
-        "Number_1": "1",
-        "Number_2": "2",
-        "Number_3": "3"
-    };
-
+	
 	  var Color_Json_To_String = JSON.stringify(colors);
-	var Number_Json_To_String = JSON.stringify(Numbers); 
 	  /////////////
 	   
 	   
@@ -63,12 +54,8 @@ var query = url.searchParams.get("route");
 	   
       if (query == "colors") {
 	  document.body.innerHTML = "valid API access route, you searched for " + "<br>"+ Color_Json_To_String 
-	  }
-	   
-	   
-	   
-	if (query == "numbers") {
-	  document.body.innerHTML = "valid API access route, you searched for "+ "<br>"+  Number_Json_To_String 
+	  } else {
+	document.body.innerHTML =  "Not a Valid API route, read documenation for proper usage."
 	  }
 	   
     }
