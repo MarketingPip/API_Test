@@ -48,9 +48,9 @@ console.log(c);
       if (c == "colors") {
 	  document.body.innerHTML = "valid API access route, you searched for " + c + "<br>"+  "{color:red}"
 	  }
-	   
+	   var jsonStr = JSON.stringify(drive);
 	if (c == "drive") {
-	  document.body.innerHTML = "valid API access route, you searched for " + c + "<br>"+  drive
+	  document.body.innerHTML = "valid API access route, you searched for " + c + "<br>"+  jsonStr
 	  }
 	   
     }
