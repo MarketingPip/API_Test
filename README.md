@@ -13,6 +13,6 @@ var Template = `     `
 // Put the content of your head content if any
 document.head.innerHTML = "" 
 
-window.location.href = "/api/"
+window.location.href = "API_Test/api/"
 // document.body.innerHTML = Template </script>
 
