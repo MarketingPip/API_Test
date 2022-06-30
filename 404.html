@@ -17,14 +17,29 @@
 
 
 
-if (window.location.href.indexOf("/api/get_value?")) {
+if (window.location.href.indexOf("/api/get_value?") != -1) {
 
    window.onload=function(){
+    
+	   
+     // if API route is not called properly / does not exist - display message	   
+    document.body.innerHTML = "Not a Valid API route, read documenation for proper usage."	   
+	   
+	   
+	// else    
+	   
+	// Get the query from "/api/get_value?route=EXAMPLE"
      var url_string = window.location.href
       var url = new URL(url_string);
-var c = url.searchParams.get("route");
-console.log(c);
+var query = url.searchParams.get("route");
      
+	   
+	   
+	   
+	   
+	   
+	   
+	//////////// Sample JSON DATA   
 	   
 	   var colors = {
         "color": "red",
@@ -38,23 +53,30 @@ console.log(c);
         "Number_3": "3"
     };
 
+	  var Color_Json_To_String = JSON.stringify(colors);
+	var Number_Json_To_String = JSON.stringify(Numbers); 
+	  /////////////
 	   
-	var Color_Json_To_String = JSON.stringify(colors);
 	   
-      if (c == "colors") {
+	
+     // Defining routes here	   
+	   
+      if (query == "colors") {
 	  document.body.innerHTML = "valid API access route, you searched for " + c + "<br>"+ Color_Json_To_String 
 	  }
 	   
 	   
-	   var Number_Json_To_String = JSON.stringify(Numbers);
-	if (c == "numbers") {
+	   
+	if (query == "numbers") {
 	  document.body.innerHTML = "valid API access route, you searched for " + c + "<br>"+  Number_Json_To_String 
 	  }
 	   
     }
 } else {
   window.onload=function(){
-      document.body.innerHTML = "Not a Valid API access route"
+	  
+          // if API route is not called properly / does not exist - display message AGAIN
+      document.body.innerHTML = "Not a Valid API route, read documenation for proper usage."
     }
 }
     
