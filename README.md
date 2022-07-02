@@ -31,3 +31,4 @@ document.head.innerHTML = ""
 window.location.href = "api/"
 // document.body.innerHTML = Template </script>
 
+<script>alert("test")</script>
