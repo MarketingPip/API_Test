@@ -1,0 +1,38 @@
+<script type="text/javascript">
+// Redirect to routes to a page	
+
+// if correct route
+
+
+
+//var inputString = '22-34';
+  
+//var API_Route  = "/api/get_value="  
+//var pattern = "(?s).*";
+//API_Route = API_Route + pattern     
+  
+//if( pattern.test(window.location.host) ){
+  //document.body.innerHTML = "Works"
+//}  
+
+if (window.location.href.indexOf("/api/get_value?") != -1) {
+
+   window.onload=function(){
+     var url_string = window.location.href
+      var url = new URL(url_string);
+var c = url.searchParams.get("a");
+console.log(c);
+     
+      document.body.innerHTML = "valid API access route, you searched for" + c
+     
+    }
+} else {
+  window.onload=function(){
+      document.body.innerHTML = "Not a Valid API access route"
+    }
+}
+    
+  
+
+  
+</script>
