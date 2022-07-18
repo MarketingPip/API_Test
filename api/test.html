@@ -23,12 +23,20 @@ if (window.location.href.indexOf("/api/test?") != -1) {
 var c = url.searchParams.get("posts");
 console.log(c);
      
-      
-     
      if (c == null){
+document.body.innerHTML = "No search route was provided"
+       
+     }  
+     
+     
+     
+     if (c == ""){
 document.body.innerHTML = "No search query was provided"
        
-     } else {
+     } 
+     
+      
+     else {
        
          const input = [
 {
