@@ -60,6 +60,9 @@ input.forEach(object => {
        
        if (url == ""){
         SearchResults = false 
+         var Message = "No search query was provided"
+       } else {
+         var Message = "No blog posts found for " + c
        }
        
        if (SearchResults === true) {
@@ -67,7 +70,7 @@ input.forEach(object => {
          document.body.innerHTML = "Blog posts found containing:" + c + blogPosts
          
        } else {
-          document.body.innerHTML = "No blog posts found for " + c
+          document.body.innerHTML = Message
        }
          
        
