@@ -20,13 +20,13 @@ if (window.location.href.indexOf("/api/test?") != -1) {
    window.onload=function(){
      var url_string = window.location.href
       var url = new URL(url_string);
-var c = url.searchParams.get("a");
+var c = url.searchParams.get("posts");
 console.log(c);
      
       
      
      if (c == null){
-document.body.innerHTML = "No Search Provided"
+document.body.innerHTML = "No search query was provided"
        
      } else {
        
@@ -53,7 +53,7 @@ var blogPosts = ""
 var SearchResults = false
 input.forEach(object => {
   if(object.url.includes(url)) {
-  blogPosts += JSON.stringify(object)
+  blogPosts += JSON.stringify(object.url)
   SearchResults = true  
   } 
 })
