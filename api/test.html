@@ -23,7 +23,42 @@ if (window.location.href.indexOf("/api/test") != -1) {
 var c = url.searchParams.get("a");
 console.log(c);
      
-      document.body.innerHTML = "valid API access route, you searched for" + c
+      
+     
+     if (c == null){
+document.body.innerHTML = "No Search Provided"
+       
+     } else {
+       
+         const input = [
+{
+url: "www.google.com",
+name: "name1"
+},
+{
+url: "www.google.com2",
+name: "name1"
+},
+{
+url: "www.google.com3",
+name: "name1"
+}
+]
+
+
+let url = c
+
+input.forEach(object => {
+  if(object.url.includes(url)) {
+  document.body.innerHTML = "Blog posts for " + c
+  } else {
+    
+     document.body.innerHTML = "No blog posts found for " + c
+    
+  }
+    
+})
+     }
      
     }
 } else {
