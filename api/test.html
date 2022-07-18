@@ -15,7 +15,7 @@
   //document.body.innerHTML = "Works"
 //}  
 
-if (window.location.href.indexOf("/api/test") != -1) {
+if (window.location.href.indexOf("/api/test?") != -1) {
 
    window.onload=function(){
      var url_string = window.location.href
@@ -55,13 +55,12 @@ var SearchResults = false
 input.forEach(object => {
   if(object.url.includes(url)) {
   blogPosts += JSON.stringify(object)
-  SearchResults = true  
-  }
-    
+  var SearchResults = true  
+  } 
 })
        
        
-       if (SearchResults == true) {
+       if (SearchResults === true) {
          
          document.body.innerHTML = "Blog posts found containing:" + c + blogPosts
          
