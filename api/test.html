@@ -50,16 +50,16 @@ let url = c
 
 var blogPosts = ""
 
-
+var SearchResults = false
 input.forEach(object => {
   if(object.url.includes(url)) {
   blogPosts += JSON.stringify(object)
-  var SearchResults = true  
+  SearchResults = true  
   } 
 })
        
        
-       if (SearchResults) {
+       if (SearchResults === true) {
          
          document.body.innerHTML = "Blog posts found containing:" + c + blogPosts
          
