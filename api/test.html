@@ -23,11 +23,7 @@ if (window.location.href.indexOf("/api/test?") != -1) {
 var c = url.searchParams.get("posts");
 console.log(c);
      
-     if (c == null){
-document.body.innerHTML = "No search route was provided"
-       
-     }  
-     
+ 
      
      
      if (c == ""){
@@ -64,7 +60,10 @@ input.forEach(object => {
   blogPosts += JSON.stringify(object.url)
   SearchResults = true  
   } 
-})
+})     if (url == null){
+          SearchResults = false 
+         var Message = "No search query was provided"
+}
        
        if (url == ""){
         SearchResults = false 
