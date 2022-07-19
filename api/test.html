@@ -65,6 +65,13 @@ input.forEach(object => {
          var Message = "No blog posts found for " + c
        }
        
+       
+          
+     if (url === null){
+ SearchResults = false 
+ var Message = "No search route provided"
+       
+     } 
        if (SearchResults === true) {
          
          document.body.innerHTML = "Blog posts found containing:" + c + blogPosts
