@@ -53,7 +53,7 @@ var blogPosts = ""
 var SearchResults = false
 input.forEach(object => {
   if(object.url.includes(url)) {
-  blogPosts += JSON.stringify(object.url)
+  blogPosts += object.url
   SearchResults = true  
   } 
 })
@@ -74,7 +74,10 @@ input.forEach(object => {
      } 
        if (SearchResults === true) {
          
-         document.body.innerHTML = "Blog posts found containing:" + c + blogPosts
+         document.body.innerHTML = ` Blog posts found containing:  ${c}  
+         <br>
+  
+         ${blogPosts} `
          
        } else {
           document.body.innerHTML = Message
