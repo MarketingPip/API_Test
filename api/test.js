@@ -77,7 +77,7 @@ function findMatchResults(JsonValue, url){
   
 }
      
-       
+      https://marketingpip.github.io/API_Test/api/test?type=url&text=google 
        
  /// Define the search types here here
    var Route = getParameterByName("text");       
@@ -85,13 +85,22 @@ if (url == "name"){
 
   findMatchResults('name', Route)
  
+    
+   var Message = ` Blog names found containing:  ${c}  
+         <br>
   
+         ${blogPosts} `  
   
 }
        
 if (url == "url"){
   
   findMatchResults('url', Route)
+    
+   var Message = ` Blog URLs found containing:  ${c}  
+         <br>
+  
+         ${blogPosts} `
 }       
        
        
@@ -111,10 +120,7 @@ if (url == "url"){
      } 
        if (SearchResults === true) {
          
-         document.body.innerHTML = ` Blog posts found containing:  ${c}  
-         <br>
-  
-         ${blogPosts} `
+         document.body.innerHTML = Message
          
        } else {
           document.body.innerHTML = Message
