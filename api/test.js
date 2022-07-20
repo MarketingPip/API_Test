@@ -83,24 +83,15 @@ function findMatchResults(JsonValue, url){
    var Route = getParameterByName("text");       
 if (url == "name"){
 
+      var SearchTypeMessage =  "Blog Names found containing:"
   findMatchResults('name', Route)
- 
-    
-   var Message = ` Blog names found containing:  ${c}  
-         <br>
-  
-         ${blogPosts} `  
-  
 }
        
 if (url == "url"){
   
   findMatchResults('url', Route)
-    
-   var Message = ` Blog URLs found containing:  ${c}  
-         <br>
+    var SearchTypeMessage =  "Blog URLs found containing:"
   
-         ${blogPosts} `
 }       
        
        
@@ -119,8 +110,11 @@ if (url == "url"){
        
      } 
        if (SearchResults === true) {
-         
-         document.body.innerHTML = Message
+    
+         document.body.innerHTML = ` ${SearchTypeMessage}  ${c}  
+         <br>
+  
+         ${blogPosts} `
          
        } else {
           document.body.innerHTML = Message
