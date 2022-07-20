@@ -1,3 +1,19 @@
+// used to get multiple query / param values
+let getParameterByName = function() {
+    let queries = location.search.substring(1).split('&'),
+        processed = {};
+    for (let query of queries) {
+        let [name, value] = query.split('=');
+        processed[decodeURIComponent(name)] = value? decodeURIComponent(value) : '';
+    }
+
+    return function(name) {
+        if (typeof processed[name] !== 'undefined')
+            return processed[name];
+        else
+            return null; 
+    };
+}();
 
 // Redirect to routes to a page	
 
@@ -64,7 +80,7 @@ function findMatchResults(JsonValue, url){
        
        
  /// Define the search types here here
-   var Route = url.searchParams.get("text");       
+   var Route = getParameterByName("text");       
 if (url == "name"){
 
   findMatchResults('name', Route)
