@@ -85,10 +85,6 @@ if (url == "name"){
 
   findMatchResults('name', Route)
  
-    var Message =  ` Blog posts with name's found containing:  ${c}  
-         <br>
-  
-         ${blogPosts} `
   
   
 }
@@ -96,13 +92,6 @@ if (url == "name"){
 if (url == "url"){
   
   findMatchResults('url', Route)
-    
-    var Message =  ` Blog posts with URL's found containing:  ${c}  
-         <br>
-  
-         ${blogPosts} `
-   
-    
 }       
        
        
@@ -122,7 +111,10 @@ if (url == "url"){
      } 
        if (SearchResults === true) {
          
-         document.body.innerHTML = Message
+         document.body.innerHTML = ` Blog posts found containing:  ${c}  
+         <br>
+  
+         ${blogPosts} `
          
        } else {
           document.body.innerHTML = Message
@@ -139,6 +131,4 @@ if (url == "url"){
     }
 }
     
-  
-
   
