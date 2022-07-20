@@ -20,8 +20,8 @@ if (window.location.href.indexOf("/api/test?") != -1) {
    window.onload=function(){
      var url_string = window.location.href
       var url = new URL(url_string);
-var c = url.searchParams.get("posts");
-console.log(c);
+var c = url.searchParams.get("type");
+
      
       
      
@@ -51,27 +51,31 @@ let url = c
 var blogPosts = ""
 
 var SearchResults = false
-function findMatchResults(JsonValue){
+function findMatchResults(JsonValue, url){
  input.forEach(object => {
-  if(object.JsonValue.includes(url)) {
-  blogPosts += object.url
+  if(object[JsonValue].includes(url)) {
+  blogPosts += object[JsonValue]
   SearchResults = true  
   } 
 }) 
   
 }
+     
        
        
- /// Define the rotues here      
-       
+ /// Define the search types here here
+   var Route = url.searchParams.get("text");       
 if (url == "name"){
+
+  findMatchResults('name', Route)
+ 
   
-  findMatchResults('name')
+  
 }
        
 if (url == "url"){
   
-  findMatchResults('url')
+  findMatchResults('url', Route)
 }       
        
        
