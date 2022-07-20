@@ -77,7 +77,7 @@ function findMatchResults(JsonValue, url){
   
 }
      
-      https://marketingpip.github.io/API_Test/api/test?type=url&text=google 
+ 
        
  /// Define the search types here here
    var Route = getParameterByName("text");       
