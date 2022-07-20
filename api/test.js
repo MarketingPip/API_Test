@@ -51,12 +51,29 @@ let url = c
 var blogPosts = ""
 
 var SearchResults = false
-input.forEach(object => {
-  if(object.url.includes(url)) {
+function findMatchResults(JsonValue){
+ input.forEach(object => {
+  if(object.JsonValue.includes(url)) {
   blogPosts += object.url
   SearchResults = true  
   } 
-})
+}) 
+  
+}
+       
+       
+ /// Define the rotues here      
+       
+if (url == "name"){
+  
+  findMatchResults('name')
+}
+       
+if (url == "url"){
+  
+  findMatchResults('url')
+}       
+       
        
        if (url == ""){
         SearchResults = false 
