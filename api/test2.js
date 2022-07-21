@@ -31,7 +31,7 @@ let getParameterByName = function() {
   //document.body.innerHTML = "Works"
 //}  
 
-if (window.location.href.indexOf("/api/test?") != -1) {
+if (window.location.href.indexOf("/api/test2?") != -1) {
 
    window.onload=function(){
      var url_string = window.location.href
