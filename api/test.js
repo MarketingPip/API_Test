@@ -49,15 +49,15 @@ document.body.innerHTML = "No search route provided"
          const input = [
 {
 url: "www.google.com",
-name: "name1"
+name: "Frank"
 },
 {
 url: "www.google.com2",
-name: "name1"
+name: "Mike"
 },
 {
 url: "www.google.com3",
-name: "name1"
+name: "John"
 }
 ]
 
@@ -70,7 +70,7 @@ var SearchResults = false
 function findMatchResults(JsonValue, url){
  input.forEach(object => {
   if(object[JsonValue].includes(url)) {
-  blogPosts += object[JsonValue]
+  blogPosts += object[JsonValue] + "<br>"
   SearchResults = true  
   } 
 }) 
@@ -85,12 +85,17 @@ if (url == "name"){
 
       var SearchTypeMessage =  "Blog Names found containing:"
   findMatchResults('name', Route)
+    
+       var No = "names"
+  
 }
        
 if (url == "url"){
   
   findMatchResults('url', Route)
     var SearchTypeMessage =  "Blog URLs found containing:"
+    
+    var No = "URLS"
   
 }       
        
@@ -99,7 +104,7 @@ if (url == "url"){
         SearchResults = false 
          var Message = "No search query was provided"
        } else {
-         var Message = "No blog posts found for " + c
+         var Message =  `No blog ${No} found for ${url} `
        }
        
        
@@ -111,7 +116,7 @@ if (url == "url"){
      } 
        if (SearchResults === true) {
     
-         document.body.innerHTML = ` ${SearchTypeMessage}  ${c}  
+         document.body.innerHTML = ` ${SearchTypeMessage} ${url} 
          <br>
   
          ${blogPosts} `
