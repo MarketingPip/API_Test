@@ -79,6 +79,8 @@ function findMatchResults(JsonValue, url){
      
  
        
+  var No = ""       
+         
  /// Define the search types here here
    var Route = getParameterByName("text");       
 if (url == "name"){
@@ -86,7 +88,7 @@ if (url == "name"){
       var SearchTypeMessage =  "Blog Names found containing:"
   findMatchResults('name', Route)
     
-       var No = "names"
+       No = "names"
   
 }
        
@@ -95,7 +97,7 @@ if (url == "url"){
   findMatchResults('url', Route)
     var SearchTypeMessage =  "Blog URLs found containing:"
     
-    var No = "URLS"
+    No = "URLS"
   
 }       
        
@@ -104,7 +106,7 @@ if (url == "url"){
         SearchResults = false 
          var Message = "No search query was provided"
        } else {
-         var Message =  `No blog ${No} found for ${url} `
+         var Message =  `No blog ${No} found for ${Route} `
        }
        
        
@@ -116,7 +118,7 @@ if (url == "url"){
      } 
        if (SearchResults === true) {
     
-         document.body.innerHTML = ` ${SearchTypeMessage} ${url} 
+         document.body.innerHTML = ` ${SearchTypeMessage} ${Route} 
          <br>
   
          ${blogPosts} `
