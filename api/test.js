@@ -102,7 +102,7 @@ if (url == "url"){
 }       
        
        
-       if (url == ""){
+       if (Route == ""  || Route == null){
         SearchResults = false 
          var Message = "No search query was provided"
        } else {
@@ -111,7 +111,7 @@ if (url == "url"){
        
        
           
-     if (url === null){
+     if (url === null  || url == ""){
  SearchResults = false 
  var Message = "No search route provided"
        
