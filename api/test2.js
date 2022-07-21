@@ -98,7 +98,7 @@ if (url == "url"){
     var SearchTypeMessage =  "Blog URLs found containing:"
     
     No = "URLS"
-  
+    SearchResults = true  
 }       
        
        
